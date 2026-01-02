@@ -1,0 +1,90 @@
+.weather-app {
+    background: linear-gradient(135deg, #87CEEB 0%, #FFD700 100%);
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+/* css to add floating clouds animation */
+.weather-app::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 100px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    animation: float 6s ease-in-out infinite;
+}
+.weather-app::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 80px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    animation: float 8s ease-in-out infinite reverse;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+/* css for weather card styling with glassmorphism effect */
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.weather-card:hover {
+    transform: translateY(-5px);
+}
+/* css for title with color gradient */
+.card-title {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+/* css for button styling */
+.btn-primary {
+    background: linear-gradient(45deg, #4ECDC4, #45B7D1);
+    border: none;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background: linear-gradient(45deg, #45B7D1, #4ECDC4);
+}
+.form-control:hover{
+    border-color: none !important;
+    box-shadow: none !important;
+}
+.form-control:focus{
+    border-color: none !important;
+    box-shadow: none !important;
+}
+/* css for weather info display with fade-in animation */
+.weather-info {
+    animation: fadeIn 1s ease-in-out;
+}
+/* css for weather icon styling */
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* css for responsive */
+@media (max-width: 768px) {
+    .weather-card {
+        margin: 20px;
+    }
+}
