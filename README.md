@@ -6,8 +6,8 @@ A modern and responsive Weather Application built with React that allows users t
   Users can enter any city name to fetch real-time weather data.
   
 **🌡️ Live Weather Details**:
-  Displays current temperature (°C)
-  Shows weather condition (e.g., Sunny, Cloudy, Rainy)
+  Displays current temperature (°C)\
+  Shows weather condition (e.g., Sunny, Cloudy, Rainy)\
   Displays city and country information
   
 **❌ Error Handling**:
