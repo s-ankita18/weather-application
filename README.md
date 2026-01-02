@@ -18,9 +18,9 @@ A modern and responsive Weather Application built with React that allows users t
 ### How It Works
   1. User enters a city name in the input field.
   2. On form submission:
-      Input is validated\ 
+      Input is validated\
       API request is triggered
-  3. Weather data is fetched asynchronously.\
+  3. Weather data is fetched asynchronously.
   4. UI updates dynamically with:
       Temperature\
       Location\
